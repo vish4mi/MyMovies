@@ -33,13 +33,13 @@
                         <rect key="frame" x="0.0" y="380" width="342" height="120"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Missing" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlC-mp-Kd5">
-                                <rect key="frame" x="10" y="5" width="322" height="65"/>
+                                <rect key="frame" x="10" y="5" width="322" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPb-pb-iPF">
-                                <rect key="frame" x="10" y="70" width="40" height="40"/>
+                                <rect key="frame" x="10" y="35.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dPb-pb-iPF" secondAttribute="height" multiplier="1:1" id="Tbq-pT-tTw"/>
                                     <constraint firstAttribute="width" constant="40" id="cM5-x1-j7h"/>
@@ -49,13 +49,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="N/A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="win-N0-5tA">
-                                <rect key="frame" x="60" y="70" width="272" height="17.5"/>
+                                <rect key="frame" x="60" y="35.5" width="272" height="17.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not available" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XZ-W5-9xw">
-                                <rect key="frame" x="60" y="87.5" width="272" height="22.5"/>
+                                <rect key="frame" x="60" y="53" width="272" height="17.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,15 +63,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dPb-pb-iPF" firstAttribute="top" secondItem="xlC-mp-Kd5" secondAttribute="bottom" id="3Ye-Op-weM"/>
                             <constraint firstItem="xlC-mp-Kd5" firstAttribute="leading" secondItem="gCs-uJ-kl2" secondAttribute="leading" constant="10" id="APd-Jf-sae"/>
                             <constraint firstAttribute="trailing" secondItem="win-N0-5tA" secondAttribute="trailing" constant="10" id="Gx1-Ol-rJD"/>
-                            <constraint firstItem="win-N0-5tA" firstAttribute="top" secondItem="xlC-mp-Kd5" secondAttribute="bottom" id="Lja-Pb-V2g"/>
-                            <constraint firstAttribute="bottom" secondItem="1XZ-W5-9xw" secondAttribute="bottom" constant="10" id="Mje-Ss-iXY"/>
+                            <constraint firstItem="win-N0-5tA" firstAttribute="top" secondItem="xlC-mp-Kd5" secondAttribute="bottom" constant="10" id="Lja-Pb-V2g"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1XZ-W5-9xw" secondAttribute="bottom" constant="10" id="Mje-Ss-iXY"/>
                             <constraint firstItem="1XZ-W5-9xw" firstAttribute="leading" secondItem="win-N0-5tA" secondAttribute="leading" id="WGZ-1G-EIy"/>
                             <constraint firstAttribute="trailing" secondItem="xlC-mp-Kd5" secondAttribute="trailing" constant="10" id="Zpx-ac-0r6"/>
-                            <constraint firstAttribute="bottom" secondItem="dPb-pb-iPF" secondAttribute="bottom" constant="10" id="aI5-gE-aDL"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dPb-pb-iPF" secondAttribute="bottom" constant="10" id="aI5-gE-aDL"/>
                             <constraint firstItem="1XZ-W5-9xw" firstAttribute="top" secondItem="win-N0-5tA" secondAttribute="bottom" id="aXS-Tv-w3Q"/>
+                            <constraint firstItem="win-N0-5tA" firstAttribute="top" secondItem="dPb-pb-iPF" secondAttribute="top" id="i19-jO-2gj"/>
                             <constraint firstItem="win-N0-5tA" firstAttribute="leading" secondItem="dPb-pb-iPF" secondAttribute="trailing" constant="10" id="krO-Vi-dY7"/>
                             <constraint firstItem="1XZ-W5-9xw" firstAttribute="trailing" secondItem="win-N0-5tA" secondAttribute="trailing" id="pgv-sG-R6J"/>
                             <constraint firstAttribute="height" constant="120" id="yEl-EB-yXj"/>
