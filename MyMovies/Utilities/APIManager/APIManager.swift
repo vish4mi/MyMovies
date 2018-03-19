@@ -51,11 +51,15 @@ class APIManager: NSObject {
                         return
                 }
                 let movieModels = Mapper<MoviesModel>().mapArray(JSONArray: responseArray)
-                completion(movieModels, nil)
+                DispatchQueue.main.async {
+                    completion(movieModels, nil)
+                }
                 
             } catch let error as NSError {
                 print("error trying to convert data to JSON")
-                completion(nil, error)
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
                 return
             }
         }

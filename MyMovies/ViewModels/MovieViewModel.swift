@@ -49,7 +49,7 @@ class MovieViewModel: NSObject, MovieViewModelProtocol {
         }
         
         if let aReleaseYear = model.releaseYear {
-            releaseYear = String(aReleaseYear)
+            releaseYear = "Released in: \(aReleaseYear)"
         }
     }
 }

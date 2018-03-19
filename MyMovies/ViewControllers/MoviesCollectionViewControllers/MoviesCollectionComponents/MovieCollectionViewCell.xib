@@ -1,21 +1,109 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieCollectionViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieCollectionViewCell" customModule="MyMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="500"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="342" height="500"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="orP-4A-di1">
+                        <rect key="frame" x="0.0" y="0.0" width="342" height="380"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCs-uJ-kl2">
+                        <rect key="frame" x="0.0" y="380" width="342" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Missing" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlC-mp-Kd5">
+                                <rect key="frame" x="10" y="5" width="322" height="65"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPb-pb-iPF">
+                                <rect key="frame" x="10" y="70" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dPb-pb-iPF" secondAttribute="height" multiplier="1:1" id="Tbq-pT-tTw"/>
+                                    <constraint firstAttribute="width" constant="40" id="cM5-x1-j7h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="N/A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="win-N0-5tA">
+                                <rect key="frame" x="60" y="70" width="272" height="17.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not available" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XZ-W5-9xw">
+                                <rect key="frame" x="60" y="87.5" width="272" height="22.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dPb-pb-iPF" firstAttribute="top" secondItem="xlC-mp-Kd5" secondAttribute="bottom" id="3Ye-Op-weM"/>
+                            <constraint firstItem="xlC-mp-Kd5" firstAttribute="leading" secondItem="gCs-uJ-kl2" secondAttribute="leading" constant="10" id="APd-Jf-sae"/>
+                            <constraint firstAttribute="trailing" secondItem="win-N0-5tA" secondAttribute="trailing" constant="10" id="Gx1-Ol-rJD"/>
+                            <constraint firstItem="win-N0-5tA" firstAttribute="top" secondItem="xlC-mp-Kd5" secondAttribute="bottom" id="Lja-Pb-V2g"/>
+                            <constraint firstAttribute="bottom" secondItem="1XZ-W5-9xw" secondAttribute="bottom" constant="10" id="Mje-Ss-iXY"/>
+                            <constraint firstItem="1XZ-W5-9xw" firstAttribute="leading" secondItem="win-N0-5tA" secondAttribute="leading" id="WGZ-1G-EIy"/>
+                            <constraint firstAttribute="trailing" secondItem="xlC-mp-Kd5" secondAttribute="trailing" constant="10" id="Zpx-ac-0r6"/>
+                            <constraint firstAttribute="bottom" secondItem="dPb-pb-iPF" secondAttribute="bottom" constant="10" id="aI5-gE-aDL"/>
+                            <constraint firstItem="1XZ-W5-9xw" firstAttribute="top" secondItem="win-N0-5tA" secondAttribute="bottom" id="aXS-Tv-w3Q"/>
+                            <constraint firstItem="win-N0-5tA" firstAttribute="leading" secondItem="dPb-pb-iPF" secondAttribute="trailing" constant="10" id="krO-Vi-dY7"/>
+                            <constraint firstItem="1XZ-W5-9xw" firstAttribute="trailing" secondItem="win-N0-5tA" secondAttribute="trailing" id="pgv-sG-R6J"/>
+                            <constraint firstAttribute="height" constant="120" id="yEl-EB-yXj"/>
+                            <constraint firstItem="dPb-pb-iPF" firstAttribute="leading" secondItem="gCs-uJ-kl2" secondAttribute="leading" constant="10" id="zae-wb-xze"/>
+                            <constraint firstItem="xlC-mp-Kd5" firstAttribute="top" secondItem="gCs-uJ-kl2" secondAttribute="top" constant="5" id="zml-EK-FSh"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="orP-4A-di1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4RH-4b-Xu6"/>
+                <constraint firstAttribute="trailing" secondItem="gCs-uJ-kl2" secondAttribute="trailing" id="OJW-Vu-LDF"/>
+                <constraint firstItem="gCs-uJ-kl2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ROn-o2-K71"/>
+                <constraint firstItem="gCs-uJ-kl2" firstAttribute="top" secondItem="orP-4A-di1" secondAttribute="bottom" id="Ros-ya-Hgu"/>
+                <constraint firstAttribute="bottom" secondItem="gCs-uJ-kl2" secondAttribute="bottom" id="Yh1-lx-DEq"/>
+                <constraint firstAttribute="trailing" secondItem="orP-4A-di1" secondAttribute="trailing" id="ocA-Nd-LEG"/>
+                <constraint firstItem="orP-4A-di1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tay-g6-VQ1"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="342" height="362"/>
+            <connections>
+                <outlet property="movieDetailsView" destination="gCs-uJ-kl2" id="pZ8-5u-ECi"/>
+                <outlet property="movieGenre" destination="1XZ-W5-9xw" id="If8-N3-szM"/>
+                <outlet property="movieImageView" destination="orP-4A-di1" id="KG0-OX-oDC"/>
+                <outlet property="movieRating" destination="dPb-pb-iPF" id="guv-iO-xBP"/>
+                <outlet property="movieReleaseYear" destination="win-N0-5tA" id="hn3-yB-9cx"/>
+                <outlet property="movieTitle" destination="xlC-mp-Kd5" id="f3a-Zy-iXD"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="-8"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="poster-placeholder" width="386" height="572"/>
+    </resources>
 </document>

@@ -20,6 +20,31 @@ class ConfigurationManager: NSObject {
         return instance
     }()
     
+    override init() {
+        super.init()
+        initialize()
+    }
+    
+    // Private method
+    func initialize ()   {
+        
+        //load the environment settings
+        environment = currentConfiguration()
+        if environment == nil {
+            
+            assertionFailure(NSLocalizedString("Unable to load application configuration", comment: "Unable to load application configuration"))
+        }
+    }
+    
+    // currentConfiguration
+    private func currentConfiguration () -> Environment   {
+        
+        let configuration = prodEnvironment
+        // apply rule for loading test and UAT configuration (production is default)
+        //configuration = test4Environment
+        return configuration
+    }
+    
     /// API Endpoint
     ///
     /// - Returns: Base URL for the current configuration
