@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol MovieViewModelProtocol: NSObject {
+protocol MovieViewModelProtocol: class {
     
     /// Content Title
     var title: String? { get }

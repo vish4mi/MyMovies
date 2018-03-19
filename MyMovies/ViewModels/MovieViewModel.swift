@@ -8,22 +8,22 @@
 
 import Foundation
 
-class MovieViewModel: NSObject {
+class MovieViewModel: NSObject, MovieViewModelProtocol {
     
     /// Content Title
-    private var title: String?
+    internal var title: String?
     
     /// Content Image
-    private var image: String?
+    internal var image: String?
     
     /// Content rating
-    private var rating: String?
+    internal var rating: String?
     
     /// Release year
-    private var releaseYear: String?
+    internal var releaseYear: String?
     
     /// Genre
-    private var genre: String?
+    internal var genre: String?
     
     
     init(with model: MoviesModel) {

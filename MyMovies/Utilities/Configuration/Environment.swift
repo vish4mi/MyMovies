@@ -7,3 +7,11 @@
 //
 
 import Foundation
+struct Environment {
+    var name: String = ""
+    var apiEndPoint: String = ""
+}
+
+//Production server configuration
+let prodEnvironment = Environment(name: "production",
+                                  apiEndPoint: "https://api.androidhive.info/json")

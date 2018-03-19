@@ -10,10 +10,34 @@ import UIKit
 
 class MoviesGridCollectionViewController: UIViewController {
 
+    private var movieViewModel: [MovieViewModel]? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        APIManager.sharedManager.getMoviesData { (moviesData, error) in
+            if let moviemodels = moviesData {
+                if self.movieViewModel == nil {
+                    self.movieViewModel = [MovieViewModel]()
+                }
+                for movieModel in moviemodels {
+                    let movieViewModel = MovieViewModel(with: movieModel)
+                    self.movieViewModel?.append(movieViewModel)
+                }
+            } else {
+                DBHandler.sharedHandler.fetchMoviesData(with: { (moviesData, error) in
+                    if let moviemodels = moviesData {
+                        if self.movieViewModel == nil {
+                            self.movieViewModel = [MovieViewModel]()
+                        }
+                        for movieModel in moviemodels {
+                            let movieViewModel = MovieViewModel(with: movieModel)
+                            self.movieViewModel?.append(movieViewModel)
+                        }
+                    }
+                })
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
